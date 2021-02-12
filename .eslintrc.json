@@ -17,6 +17,9 @@
             "WithStatement"
           ] ,
           "no-plusplus": "off",
-          "no-param-reassign": "off"
+          "no-param-reassign": "off",
+          "no-restricted-globals": "off",
+          "no-alert": "off",
+          "default-case": "off"
     }
 }
