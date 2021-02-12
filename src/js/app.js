@@ -15,13 +15,18 @@ for (let n= 0; n < names.length; n++ ) {
         diamondsArr.push(new Diamonds(names[n]))
         heartsArr.push(new Hearts(names[n]))
 }
-   pack =  pack.concat(spadesArr, clubsArr, diamondsArr, heartsArr);
+    pack =  pack.concat(spadesArr, clubsArr, diamondsArr, heartsArr);
     
     let desk = document.querySelector('.desk');
+    let counter = 0;
+    let counterContainer = document.querySelector('.result__points');
+    counterContainer.innerHTML = counter;
+
         
 function takeOne() {
     
     let newCard = pack.splice(Math.floor(Math.random()*pack.length), 1);
+
     let icon;
     let suitClass;
     if (newCard[0].suit === 'spades') {
@@ -44,18 +49,25 @@ function takeOne() {
 </div>
     `
     );
+    counter = counter + newCard[0].points;
+    if (counter < 11 && newCard[0].name === 'ace') {
+        newCard[0].points = 11
+    };
+    counterContainer.innerHTML = counter;
 }
-function checkSuit() {
-    let cardSuits = document.getElementsByClassName('card__suit');
-    for (let c of cardSuits) {
-        console.log(c.innerHTML)
-        if (c.innerHTML ===  '&diams;' ) {
-            c.classList.add('red')
+function checkPoints() {
+    if (counter > 21) {
+        alert ('Перебор!');
+            location.reload();
         }
-    }
 }
+let stopButton = document.querySelector('.stop');
+stopButton.addEventListener('click', ()=> {
+    alert (`Ваш результат: ${counter}`)
+    location.reload()
+})
+
 document.querySelector('.more').addEventListener('click', () => {
-    
     takeOne();
-    
+    checkPoints()
 })
