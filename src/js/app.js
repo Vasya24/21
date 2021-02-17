@@ -19,9 +19,15 @@ pack = pack.concat(spadesArr, clubsArr, diamondsArr, heartsArr);
 
 const desk = document.querySelector('.desk');
 let counter = 0;
+let compCounter = 0;
 const counterContainer = document.querySelector('.result__points');
 counterContainer.innerHTML = counter;
-
+function compTurn() {
+  const newCard = pack.splice(Math.floor(Math.random() * pack.length), 1);
+  const compHand = [];
+  compHand.push(newCard);
+  compCounter += newCard[0].points;
+}
 function takeOne() {
   const newCard = pack.splice(Math.floor(Math.random() * pack.length), 1);
 
@@ -54,14 +60,26 @@ function takeOne() {
 }
 function checkPoints() {
   if (counter > 21) {
-    alert('Перебор!');
+    alert('Перебор! Вы проиграли');
     location.reload();
+  } else if (counter === 21) {
+    alert('Очко! Вы выиграли!');
+    location.reload();
+  }
+
+  if (compCounter > 21) {
+    alert('У соперника перебор! Вы выиграли!')
+  } else if (compCounter === 21) {
+    alert('Компьютер собрал очко! Вы проиграли!')
   }
 }
 const stopButton = document.querySelector('.stop');
 stopButton.addEventListener('click', () => {
-  alert(`Ваш результат: ${counter}`);
-  location.reload();
+  // alert(`Ваш результат: ${counter}`);
+  // location.reload();
+  if (counter > compCounter && counter < 21) {
+    
+  }
 });
 
 document.querySelector('.more').addEventListener('click', () => {

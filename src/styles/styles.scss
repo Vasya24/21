@@ -2,6 +2,34 @@
     margin: 0;
     padding: 0;
 }
+.modal {
+    position: absolute;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.45);
+    &__window {
+        position: absolute;
+        margin-top: 20vh;
+        margin-left: 35vw;
+        width: 30vw;
+        height: 60vh;
+        background-color: #fff;
+        box-sizing: border-box;
+        border: 1px solid black;
+        .outcome {
+        }
+        .points {
+            &__player {
+            }
+            &__computer {
+            }
+        }
+    }
+    
+}
+
+
 .header {
     display: flex;
     justify-content: space-between;
