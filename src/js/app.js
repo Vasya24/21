@@ -78,7 +78,7 @@ stopButton.addEventListener('click', () => {
   // alert(`Ваш результат: ${counter}`);
   // location.reload();
   if (counter > compCounter && counter < 21) {
-    
+    alert('Вы неа брали')
   }
 });
 
