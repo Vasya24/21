@@ -1,8 +1,18 @@
+@font-face {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    src: url("./fonts/yanonekaffeesatz.ttf") format("ttf"),
+            url("./fonts/yanonekaffeesatz.woff") format("woff"),
+            url("./fonts/yanonekaffeesatz.woff2") format("woff2");
+}
+
+$font: "Yanone Kaffeesatz", sans-serif;
+
 * {
     margin: 0;
     padding: 0;
 }
 .modal {
+    display: none;
     position: absolute;
     z-index: 3;
     width: 100vw;
@@ -10,7 +20,13 @@
     background-color: rgba(0,0,0,0.45);
     &__window {
         position: absolute;
-        margin-top: 20vh;
+        // top: -100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-family: $font;
+        margin-top: 10vh;
         margin-left: 35vw;
         width: 30vw;
         height: 60vh;
@@ -18,15 +34,21 @@
         box-sizing: border-box;
         border: 1px solid black;
         .outcome {
+            font-size: 32px;
+            line-height: 2;
+            font-style: italic;
         }
         .points {
-            &__player {
-            }
-            &__computer {
-            }
+            font-size: 24px;
         }
     }
-    
+    &.active {
+        display: block;
+        .modal__window {
+            transition: all 1s .4s ease-in-out;
+            transform: translateY(100px)
+        }
+    }
 }
 
 
@@ -44,14 +66,36 @@
         background-size: cover;
     }
     .controls {
+        display: flex;
+        flex-direction: column;
         .result {
-            &__points {
-            }
+            font-family: $font;
+            font-size: 22px;
+            margin-bottom: 10px;
         }
     }
         .more {
+            font-family: $font;
+            font-size: 18px;
+            border: none;
+            border-radius: 15px;
+            padding: 10px  20px;
+            background-color: #24ACFD;
+            margin-bottom: 10px;
+            &:active {
+                background-color: #0774BD;
+            }
         }
         .stop {
+            font-family: $font;
+            font-size: 18px;
+            border: none;
+            border-radius: 15px;
+            padding: 10px  20px;
+            background-color: #EA4F47;
+            &:active {
+                background-color: #EC2E27;
+            }
         }
     }
 .desk {
@@ -68,8 +112,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #0C693A;
-    min-height: 30vh;
+    background-image: url('./img/table.jpg');
+    background-repeat: no-repeat;
+    min-height: 40vh;
     .card {
         width: 75px;
         height: 120px;
