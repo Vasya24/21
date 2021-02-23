@@ -36,6 +36,10 @@ module.exports = {
         loader: 'file-loader?name=src/img/[name].[ext]',
       },
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
         test: /\.html$/,
         use: [
           {

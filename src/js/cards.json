@@ -1,0 +1,190 @@
+{
+    "spades": [
+        {
+            "suit": "spades",
+            "name": "ace",
+            "points": 1
+        },
+        {
+            "suit": "spades",
+            "name": "jack",
+            "points": 2
+        },
+        {
+            "suit": "spades",
+            "name": "queen",
+            "points": 3
+        },
+        {
+            "suit": "spades",
+            "name": "king",
+            "points": 4
+        },
+        {
+            "suit": "six",
+            "name": "ace",
+            "points": 6
+        },
+        {
+            "suit": "spades",
+            "name": "seven",
+            "points": 7
+        },
+        {
+            "suit": "spades",
+            "name": "eight",
+            "points": 8
+        },
+        {
+            "suit": "spades",
+            "name": "nine",
+            "points": 9
+        },
+        {
+            "suit": "spades",
+            "name": "ten",
+            "points": 10
+        }
+    ],
+    "clubs": [
+        {
+            "suit": "clubs",
+            "name": "ace",
+            "points": 1
+        },
+        {
+            "suit": "clubs",
+            "name": "jack",
+            "points": 2
+        },
+        {
+            "suit": "clubs",
+            "name": "queen",
+            "points": 3
+        },
+        {
+            "suit": "clubs",
+            "name": "king",
+            "points": 4
+        },
+        {
+            "suit": "clubs",
+            "name": "ace",
+            "points": 6
+        },
+        {
+            "suit": "clubs",
+            "name": "seven",
+            "points": 7
+        },
+        {
+            "suit": "clubs",
+            "name": "eight",
+            "points": 8
+        },
+        {
+            "suit": "clubs",
+            "name": "nine",
+            "points": 9
+        },
+        {
+            "suit": "clubs",
+            "name": "ten",
+            "points": 10
+        }
+    ],
+    "diamonds": [
+        {
+            "suit": "diamonds",
+            "name": "ace",
+            "points": 1
+        },
+        {
+            "suit": "diamonds",
+            "name": "jack",
+            "points": 2
+        },
+        {
+            "suit": "diamonds",
+            "name": "queen",
+            "points": 3
+        },
+        {
+            "suit": "diamonds",
+            "name": "king",
+            "points": 4
+        },
+        {
+            "suit": "diamonds",
+            "name": "ace",
+            "points": 6
+        },
+        {
+            "suit": "diamonds",
+            "name": "seven",
+            "points": 7
+        },
+        {
+            "suit": "diamonds",
+            "name": "eight",
+            "points": 8
+        },
+        {
+            "suit": "diamonds",
+            "name": "nine",
+            "points": 9
+        },
+        {
+            "suit": "diamonds",
+            "name": "ten",
+            "points": 10
+        }
+    ],
+    "hearts": [
+        {
+            "suit": "hearts",
+            "name": "ace",
+            "points": 1
+        },
+        {
+            "suit": "hearts",
+            "name": "jack",
+            "points": 2
+        },
+        {
+            "suit": "hearts",
+            "name": "queen",
+            "points": 3
+        },
+        {
+            "suit": "hearts",
+            "name": "king",
+            "points": 4
+        },
+        {
+            "suit": "hearts",
+            "name": "ace",
+            "points": 6
+        },
+        {
+            "suit": "hearts",
+            "name": "seven",
+            "points": 7
+        },
+        {
+            "suit": "hearts",
+            "name": "eight",
+            "points": 8
+        },
+        {
+            "suit": "hearts",
+            "name": "nine",
+            "points": 9
+        },
+        {
+            "suit": "hearts",
+            "name": "ten",
+            "points": 10
+        }
+    ]
+}
